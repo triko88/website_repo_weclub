@@ -60,7 +60,7 @@
 -------------------------------------------------------------- */
 /* Style 1 */
 .half-background.style-1 { background-image:url('../img/video/bg_video1.jpg'); background-size: cover; overflow: hidden; background-position: center; background-repeat: no-repeat; }
-.half-background.style-2 { background-image:url('../img/video/bg_video2.png'); background-size: cover; overflow: hidden; background-position: center; background-repeat: no-repeat; }
+.half-background.style-2 { background-image:url('../img/video/bg_video2.png'); background-size: fix; overflow: hidden; background-position: center; background-repeat: no-repeat; }
 .half-background.style-3 { background-image:url('../img/img-single/img-single1.jpg'); background-size: cover; overflow: hidden; background-position: center; background-repeat: no-repeat; }
 
 .half-background.style-4 { background-image:url('../img/img-single/img-single3.jpg'); background-size: cover; overflow: hidden; background-position: center; background-repeat: no-repeat; }
@@ -69,7 +69,7 @@
 	.half-background.style-1,
 	.half-background.style-2,
 	.half-background.style-3,
-	.half-background.style-4 { height: 450px; }
+	.half-background.style-4 { height: 250px; }
 }
 
 .title-video { font-size: 17px; line-height: 28px; letter-spacing: -0.8px; }
