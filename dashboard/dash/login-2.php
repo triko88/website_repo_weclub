@@ -18,7 +18,33 @@
         <link rel="stylesheet" href="css/main.min.css">
     </head>
     <body class="o-page o-page--center">
-
+		
+        <?php
+	require('db.php');
+	session_start();
+    // If form submitted, insert values into the database.
+    if (isset($_POST['email'])){
+		
+		$email = stripslashes($_REQUEST['email']); // removes backslashes
+		$email = mysqli_real_escape_string($con,$email); //escapes special characters in a string
+		$password = stripslashes($_REQUEST['password']);
+		$password = mysqli_real_escape_string($con,$password);
+		
+	//Checking is user existing in the database or not
+        $query = "SELECT * FROM `users` WHERE email='$email' and password='".md5($password)."'";
+		$result = mysqli_query($con,$query) or die(mysql_error());
+		$rows = mysqli_num_rows($result);
+        if($rows==1){
+			$_SESSION['email'] = $email;
+			header("Location: dashindex.php"); // Redirect user to index.php
+            }else{
+				echo "
+				<div class='form container u-text-center'><h3 class='u-text-danger u-text-center'>Username/password is incorrect.</h3>
+				</div>";
+				}
+    }else{}
+	
+		?>
 
         <div class="o-page__card o-page__card--horizontal">
             <div class="c-card c-login-horizontal">
@@ -31,22 +57,22 @@
                         <h2 class="c-login__title">Sign In</h2>
                     </header>
 
-                    <form class="c-login__content">
+                    <form class="c-login__content" action="" method="post" name="login">
                         <div class="c-field u-mb-small">
                             <label class="c-field__label" for="input1">Email Address</label>
-                            <input class="c-input" type="email" id="input1" placeholder="vedang@dashboard.com">
+                            <input class="c-input" type="email" name="email" id="input1" placeholder="dummy@dashboard.com" required>
                         </div>
 
                         <div class="c-field u-mb-small">
                             <label class="c-field__label" for="input2">Password</label>
-                            <input class="c-input" type="password" id="input2" placeholder="Numbers, Letters...">
+                            <input class="c-input" type="password" name="password" id="input2" placeholder="Numbers, Letters..." required>
                         </div>
 
                         <button class="c-btn c-btn--success c-btn--fullwidth" type="submit">Sign in</button>
 
                         <span class="c-divider u-mv-small"></span>
 
-                        <a href="register.html" class="c-btn c-btn--secondary c-btn--fullwidth">Create Account</a>
+                        <a href="register.php" class="c-btn c-btn--secondary c-btn--fullwidth">Create Account</a>
                     </form>
                 </div>
 

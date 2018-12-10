@@ -21,7 +21,7 @@
 
         <div class="o-page__sidebar js-page-sidebar">
             <div class="c-sidebar">
-                <a class="c-sidebar__brand" href="#">
+                <a class="c-sidebar__brand" href="dashindex.php">
                     <img class="c-sidebar__brand-img" src="img/logo.png" alt="Logo">
                 </a>
 
@@ -29,19 +29,19 @@
                 <ul class="c-sidebar__list">
 
                     <li class="c-sidebar__item">
-                        <a class="c-sidebar__link" href="dashindex.html">
+                        <a class="c-sidebar__link" href="dashindex.php">
                             <i class="fa fa-home u-mr-xsmall"></i>Home
                         </a>
                     </li>
 
                     <li class="c-sidebar__item">
-                        <a class="c-sidebar__link" href="events.html">
+                        <a class="c-sidebar__link" href="events.php">
                             <i class="fa fa-clock-o u-mr-xsmall"></i>Events <span class="c-badge c-badge--success c-badge--xsmall u-ml-xsmall">New</span>
                         </a>
                     </li>
 
                     <li class="c-sidebar__item">
-                        <a class="c-sidebar__link" href="#">
+                        <a class="c-sidebar__link" href="logout.php">
                             <i class="fa fa-cog u-mr-xsmall"></i>Logout
                         </a>
                     </li>
@@ -67,9 +67,9 @@
                     </a>
 
                     <div class="c-dropdown__menu dropdown-menu dropdown-menu-right" aria-labelledby="dropdwonMenuAvatar">
-                        <a class="c-dropdown__item dropdown-item" href="events.html">Events</a>
-                        <a class="c-dropdown__item dropdown-item" href="account-settings.html">Edit Profile</a>
-                        <a class="c-dropdown__item dropdown-item" href="#">Logout</a>
+                        <a class="c-dropdown__item dropdown-item" href="events.php">Events</a>
+                        <a class="c-dropdown__item dropdown-item" href="account-settings.php">Edit Profile</a>
+                        <a class="c-dropdown__item dropdown-item" href="logout.php">Logout</a>
                     </div>
                 </div>
             </header>
