@@ -1,0 +1,11 @@
+Important Note:
+
+Change your database username and password in db.php file.
+
+
+Create Database Using the following Query:
+
+CREATE DATABASE IF NOT EXISTS register;
+
+
+and Create Table by importing attached sql file (users.sql).
