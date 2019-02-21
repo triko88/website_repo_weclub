@@ -1,1 +1,0 @@
-page header-fixed no-sidebar site-layout-full-width header-style-9 header-opacity has-topbar topbar-style-9  menu-has-search menu-has-cart
