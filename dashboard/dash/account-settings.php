@@ -18,7 +18,10 @@
         <link rel="stylesheet" href="css/main.min.css">
     </head>
     <body class="o-page">
-
+	<?php 
+	require("db.php");
+	include("auth.php");
+	?>
         <div class="o-page__sidebar js-page-sidebar">
             <div class="c-sidebar">
                 <a class="c-sidebar__brand" href="dashindex.php">
